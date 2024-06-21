@@ -18,8 +18,8 @@ const ImgCard = ({ image }) => {
         <div className="max-w-sm rounded overflow-hidden shadow-lg transition transform hover:scale-105 mx-auto sm:mx-2 my-4">
             <img src={image.webformatURL} alt="" className="w-full" style={{ width: '100%', height: 'auto' }} />
             <div className="px-4 py-4">
-                <div className="flex items-center justify-between mb-2">
-                    <div className="font-bold text-blue-400 text-lg sm:text-xl">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                    <div className="font-bold text-blue-400 text-lg sm:text-xl mb-2 sm:mb-0">
                         Photo by {image.user}
                     </div>
                     <button onClick={handleDownload} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center">
