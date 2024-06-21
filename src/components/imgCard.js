@@ -16,7 +16,9 @@ const ImgCard = ({ image }) => {
 
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg transition transform hover:scale-105 mx-auto sm:mx-2 my-4">
-            <img src={image.webformatURL} alt="" className="w-full" style={{ width: '100%', height: 'auto' }} />
+            <div className="relative" style={{ maxHeight: '300px' }}>
+                <img src={image.webformatURL} alt="" className="w-full h-auto max-h-full object-cover" />
+            </div>
             <div className="px-4 py-4">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
                     <div className="font-bold text-blue-400 text-lg sm:text-xl mb-2 sm:mb-0">
@@ -38,7 +40,7 @@ const ImgCard = ({ image }) => {
                     </li>
                 </ul>
             </div>
-            <div className="px-4 py-4 flex flex-wrap">
+            <div className="px-4 py-2 flex flex-wrap">
                 {tags.map((tag, index) => (
                     <span key={index} className="inline-block bg-blue-100 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-800 mr-2 mb-2">
                         #{tag}
